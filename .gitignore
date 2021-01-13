@@ -12,3 +12,6 @@
 
 # ...even if they are in subdirectories
 !*/
+
+# ... unl;ess the directory is .vcscode
+.vscode
