@@ -1,0 +1,11 @@
+# ignore everything
+*
+# except these files...
+!.gitignore
+!*.py
+!*.jl
+!*.sh
+!*.ipynb
+!*.r
+!*.json
+!*.md
