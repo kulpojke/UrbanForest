@@ -1,0 +1,17 @@
+{
+    "pipeline": [
+        {
+            "filename": "/media/data/UrbanTree/6249/USGS_LPC_CA_LosAngeles_2016_L4_6429_1820a_LAS_2018.laz"
+        },
+        {
+            "type": "filters.python",
+            "function": "make_plot",
+            "module": "anything",
+            "pdalargs": "{\"filename\":\"./histogram.png\"}",
+            "script": "./histogram.py"
+        },
+        {
+            "type": "writers.null"
+        }
+    ]
+}

@@ -2,10 +2,13 @@
 *
 # except these files...
 !.gitignore
-!**/*.py
-!**/*.jl
-!**/*.sh
-!**/*.ipynb
-!**/*.r
-!**/*.json
-!**/*.md
+!*.py
+!*.jl
+!*.sh
+!*.ipynb
+!*.r
+!*.json
+!*.md
+
+# ...even if they are in subdirectories
+!*/
