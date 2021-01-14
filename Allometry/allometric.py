@@ -16,7 +16,7 @@ from dask.diagnostics import ProgressBar
 # Prepare dataset for use in testing, get allo equations
 
 # read the file, drop rows with  NA in the DBH measurements 
-path = '/media/data/UrbanTree/TreeData/SanDiegoCounty.csv'
+path = 'SanDiegoCounty.csvx'
 # read the csv
 df = pd.read_csv(path, usecols=['ID', 'LATITUDE', 'LONGITUDE',
                                   'DBH_LO', 'DBH_HI', 'CREATED',
@@ -37,7 +37,7 @@ df.dropna(how='any', axis=0, subset=['DBH_LO', 'DBH_HI', 'CREATED', 'UPDATED'], 
 #  SoCalC reference city is Santa Monica, InlEmp is Claremont,
 #  see Table 1, p16 for further Climate zone details
 
-allo_df = pd.read_csv('/media/data/UrbanTree/Allometric/Data/TS6_Growth_coefficients.csv',
+allo_df = pd.read_csv('TS6_Growth_coefficients.csvx',
 usecols=['Region', 'Scientific Name', 'Independent variable', 'Predicts component ', 'EqName', 'Units of predicted components',
 'EqName', 'a', 'b', 'c', 'd', 'e', 'Apps min', 'Apps max'])
  
