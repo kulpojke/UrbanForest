@@ -9,7 +9,7 @@
 !*.r
 !*.json
 !*.md
-!*.csvx   #a trick use include some csv files 
+!*.csvx   
 
 # ...even if they are in subdirectories
 !*/
