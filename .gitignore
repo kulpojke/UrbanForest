@@ -17,3 +17,7 @@
 # ... unl;ess the directory is .vcscode
 /.vscode/
 /.ipynb_checkpoints/
+
+# ignore these specific annoying jsons
+.config/configstore/update-notifier-npm.json
+.local/share/jupyter/runtime/nbserver-1.json
