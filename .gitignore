@@ -18,6 +18,7 @@
 /.vscode/
 /.ipynb_checkpoints/
 /bin
+/tmp
 
 # ignore these specific annoying jsons
 .config/configstore/update-notifier-npm.json
