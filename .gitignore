@@ -17,8 +17,8 @@
 # ... unl;ess the directory is one of these
 /.vscode/
 /.ipynb_checkpoints/
-/bin
-/tmp
+/bin/
+/tmp/
 
 # ignore these specific annoying jsons
 .config/configstore/update-notifier-npm.json
