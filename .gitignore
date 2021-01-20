@@ -14,9 +14,10 @@
 # ...even if they are in subdirectories
 !*/
 
-# ... unl;ess the directory is .vcscode
+# ... unl;ess the directory is one of these
 /.vscode/
 /.ipynb_checkpoints/
+/bin
 
 # ignore these specific annoying jsons
 .config/configstore/update-notifier-npm.json
