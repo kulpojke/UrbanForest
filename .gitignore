@@ -10,6 +10,7 @@
 !*.json
 !*.md
 !*.csvx   
+!*.png
 
 # ...even if they are in subdirectories
 !*/
