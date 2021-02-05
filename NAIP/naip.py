@@ -16,34 +16,41 @@ import earthpy as et
 import earthpy.spatial as es
 import xarray as xr
 
-# %%
-filepath = '/media/data/UrbanTree/NAIP'
-infile = os.path.join(filepath, 'ortho_1-1_hn_s_ca037_2018_1.tif')
-outfile = os.path.join(filepath, 'ortho_1-1_hn_s_ca037_2018_1_ndvi.tif')
 
-#%% [markdown]
-# Fin out information about the geotiff.
+def get_geotiff_info(infile, output='print'):
+    '''returns info about tiff'''
+    with rio.open(infile) as dataset:
+        width, height = dataset.shape
+        count = dataset.count
+        desc = dataset.descriptions
+        metadata = dataset.meta
+        driver = dataset.driver # driver used to open
+        proj = dataset.crs
+        gt = dataset.transform
+        dtype =  metadata['dtype']
+        if output = 'print':
+            s = f'shape: {(width, height)}\ncount: {count}\n\n{desc}\n\nsrs: {proj}\ndtype: {dtype}'
+        else:
+            poo = {'width'        : width,
+                   'height'       : height,
+                   'count'        : count,
+                   'description'  : desc,
+                   'metadata'     : metadata,
+                   'driver'       : ddriver, 
+                   'crs'          : proj,
+                   'geottransorm' : gt,
+                   'dtype' : dtype
+                    }
+            return(poo)
 
-#%%
-with rio.open(infile) as dataset:
-    width, height = dataset.shape
-    count = dataset.count
-    desc = dataset.descriptions
-    metadata = dataset.meta
-    driver = dataset.driver # driver used to open
-    proj = dataset.crs
-    gt = dataset.transform
-    dtype =  metadata['dtype']
-    
-
-#%%
-with rio.open(outfile, 'w', width=width, height=height, dtype=dtype, count=count, driver='GTiff', crs=proj) as dst:
-    with rio.open(infile) as src:
-        for i, window in src.block_windows(1):
-            naip_data = src.read(window=window)
-            naip_ndvi = es.normalized_diff(naip_data[2], naip_data[0]) # 
-            naip_ndvi = naip_ndvi.astype(dtype) #TODO: will be three in real [3] - [2]
-            dst.write(naip_ndvi, window=window, indexes=1)
+def _make_ndvi(infile, outfile, width, height, dtype, count, driver='GTiff', crs):
+    with rio.open(outfile, 'w', width=width, height=height, dtype=dtype, count=count, driver=driver, crs=crs) as dst:
+        with rio.open(infile) as src:
+            for i, window in src.block_windows(1):
+                naip_data = src.read(window=window)
+                naip_ndvi = es.normalized_diff(naip_data[2], naip_data[0]) # 
+                naip_ndvi = naip_ndvi.astype(dtype) #TODO: will be three in real [3] - [2]
+                dst.write(naip_ndvi, window=window, indexes=1)
 # %%
 
 # %%
