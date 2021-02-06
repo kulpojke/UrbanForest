@@ -41,7 +41,7 @@ def get_make_ndvi_args(infile, output):
                     dtype: {dtype}'''
             print(s)
         else:
-            return(infile, outfile, width, height, dtype, count, crs, driver)
+            return(infile, outfile, width, height, dtype, count, proj, driver)
 
 def make_ndvi(infile, outfile, width, height, dtype, count, crs, driver='GTiff'):
     with rio.open(outfile, 'w', width=width, height=height, dtype=dtype, count=count, driver=driver, crs=crs) as dst:
