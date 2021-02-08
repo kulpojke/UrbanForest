@@ -48,7 +48,7 @@ def make_ndvi(infile, outfile, width, height, dtype, count, crs, driver='GTiff')
         with rio.open(infile) as src:
             for i, window in src.block_windows(1):
                 naip_data = src.read(window=window)
-                naip_ndvi = es.normalized_diff(naip_data[2], naip_data[0]) # 
+                naip_ndvi = es.normalized_diff(naip_data[3], naip_data[0]) # 
                 naip_ndvi = naip_ndvi.astype(dtype) #TODO: will be three in real [3] - [2]
                 dst.write(naip_ndvi, window=window, indexes=1)
 
