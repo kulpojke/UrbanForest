@@ -11,5 +11,5 @@ rm .local/share/jupyter/runtime/nbserver-1.json
 git pull origin
 git checkout main
 
-conda update numpyconda update numpy=1.20.1
+conda update numpy
 ```
