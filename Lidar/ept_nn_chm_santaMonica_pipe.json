@@ -1,0 +1,44 @@
+{
+        "pipeline": [
+            {
+                "bounds": "([-13194674.4781,-13184336.3701],[4028154.9536,4037117.1952])",
+                "filename": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_CA_LosAngeles_2016_LAS_2018/ept.json",
+                "type": "readers.ept",
+                "tag": "readdata",
+                "threads":32,
+                "spatialreference":"EPSG:3857"
+            },
+            {
+                "type":"filters.outlier",
+                "method":"radius",
+                "radius":1.0,
+                "min_k":4
+            },
+            {
+                "type":"filters.range",
+                "limits":"returnnumber[1:1]"
+            },
+            {
+                "type": "filters.reprojection",
+                "in_srs":"EPSG:3857",
+                "out_srs": "EPSG:26911"
+            },
+            {
+                "type":"filters.hag_nn"
+            },
+            {
+                "type":"filters.range",
+                "limits":"HeightAboveGround[0:35]"
+            },
+            {
+                "filename": "SaMo_chm.tiff",
+                "gdalopts": "tiled=yes,     compress=deflate",
+                "nodata": -9999,
+                "output_type": "idw",
+                "resolution": 0.6,
+                "type": "writers.gdal",
+                "window_size": 6,
+                "dimension": "HeightAboveGround"
+            }
+    ]
+}
