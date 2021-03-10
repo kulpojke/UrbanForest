@@ -1,6 +1,7 @@
 Setup git:
 
 ```
+git init
 git remote add origin https://github.com/kulpojke/UrbanForest
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=43200'
