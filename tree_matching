@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-19T18:24:08.010Z" agent="5.0 (X11)" etag="59j1kPCj-bOH0t2OYGqZ" version="14.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-19T18:35:23.368Z" agent="5.0 (X11)" etag="_VJlq-He2Sx6xyxbYMmO" version="14.2.9" type="github">
   <diagram name="Page-1" id="74e2e168-ea6b-b213-b513-2b3c1d86103e">
     <mxGraphModel dx="1182" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -8,28 +8,40 @@
           <mxGeometry x="10" width="910" height="790" as="geometry" />
         </mxCell>
         <mxCell id="77e6c97f196da883-2" value="o" style="swimlane;html=1;startSize=20;" parent="77e6c97f196da883-1" vertex="1">
-          <mxGeometry width="480" height="790" as="geometry" />
+          <mxGeometry width="320" height="790" as="geometry" />
         </mxCell>
         <mxCell id="8k8IAPGp7MWcSDXntwPl-5" value="&lt;div&gt;Reference Trees&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="77e6c97f196da883-2">
-          <mxGeometry x="210" y="30" width="60" height="80" as="geometry" />
+          <mxGeometry x="30" y="30" width="60" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="8k8IAPGp7MWcSDXntwPl-10" value="&lt;div align=&quot;left&quot;&gt;for candidate in candidates:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; best = best ΔD&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for candidate in remaining candidates:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (start with closest ΔD)&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if ΔH is better and ΔD &amp;lt; threshold worse:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; best = candidate&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for tree in surrounding_trees():&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if best is better with tree:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; best = next_best ?&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;align=left;" vertex="1" parent="77e6c97f196da883-2">
-          <mxGeometry x="90" y="420" width="350" height="170" as="geometry" />
+        <mxCell id="8k8IAPGp7MWcSDXntwPl-18" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;def find_neighborhood():&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&#39;&#39;&#39; finds reference trees in neighborhood of given position&#39;&#39;&#39;&lt;br&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="30" y="170" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8k8IAPGp7MWcSDXntwPl-8" value="&lt;div&gt;Test&lt;/div&gt;&lt;div&gt;Trees&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="77e6c97f196da883-2">
+          <mxGeometry x="220" y="40" width="60" height="80" as="geometry" />
         </mxCell>
         <mxCell id="77e6c97f196da883-3" value="Lane 2" style="swimlane;html=1;startSize=20;" parent="77e6c97f196da883-1" vertex="1">
-          <mxGeometry x="480" width="430" height="790" as="geometry" />
-        </mxCell>
-        <mxCell id="8k8IAPGp7MWcSDXntwPl-8" value="&lt;div&gt;Test&lt;/div&gt;&lt;div&gt;Trees&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="77e6c97f196da883-3">
-          <mxGeometry x="185" y="30" width="60" height="80" as="geometry" />
+          <mxGeometry x="320" width="590" height="790" as="geometry" />
         </mxCell>
         <mxCell id="8k8IAPGp7MWcSDXntwPl-7" value="&lt;div&gt;Sort&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="77e6c97f196da883-3">
           <mxGeometry x="155" y="150" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="8k8IAPGp7MWcSDXntwPl-9" value="&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;u&gt;&lt;b&gt;Find Candidates&lt;/b&gt;&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;neighborhood = find_neighborhood()&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;if ΔH and&amp;nbsp; ΔD:&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; candidates.append()&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;return(candidates)&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;align=left;" vertex="1" parent="77e6c97f196da883-3">
-          <mxGeometry x="75" y="370" width="280" height="100" as="geometry" />
+        <mxCell id="8k8IAPGp7MWcSDXntwPl-9" value="&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;b&gt;def find_candidates()&lt;/b&gt;:&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; neighborhood = find_neighborhood()&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if ΔH and&amp;nbsp; ΔD:&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; candidates.append()&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return(candidates)&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot; align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;align=left;" vertex="1" parent="77e6c97f196da883-3">
+          <mxGeometry x="75" y="375" width="280" height="100" as="geometry" />
         </mxCell>
         <mxCell id="8k8IAPGp7MWcSDXntwPl-17" value="for tree in test_trees:" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="77e6c97f196da883-3">
-          <mxGeometry y="260" width="430" height="60" as="geometry" />
+          <mxGeometry y="260" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8k8IAPGp7MWcSDXntwPl-10" value="&lt;div align=&quot;left&quot;&gt;for candidate in candidates:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; best = best ΔD&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for candidate in remaining candidates:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (start with closest ΔD)&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if ΔH is better and ΔD &amp;lt; threshold worse:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; best = candidate&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for tree in surrounding_trees():&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if best is better with tree:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; best = next_best ?&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;align=left;" vertex="1" parent="77e6c97f196da883-3">
+          <mxGeometry x="40" y="540" width="350" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="8k8IAPGp7MWcSDXntwPl-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=none;startFill=0;shape=flexArrow;" edge="1" parent="77e6c97f196da883-1" source="8k8IAPGp7MWcSDXntwPl-8" target="8k8IAPGp7MWcSDXntwPl-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8k8IAPGp7MWcSDXntwPl-19" value="" style="endArrow=none;dashed=1;html=1;startArrow=block;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8k8IAPGp7MWcSDXntwPl-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="360" as="sourcePoint" />
+            <mxPoint x="560" y="420" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
